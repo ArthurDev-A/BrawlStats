@@ -2,11 +2,27 @@ header {
   background-color: #2a2f4a;
   height: 12%;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 body {
+  background-color: #2a2f4a;
   display: flex;
   flex-direction: column;
   font-family: 'Kanit', sans-serif;
+  position: relative;
+}
+footer {
+  background-color: #2a2f4a;
+  height: 12%;
+  width: 100%;
+  color: #CDE0FF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
 }
 .container-contest {
   background-color: #5a1f1f;
@@ -53,16 +69,6 @@ body {
 }
 .custom-a {
   color: #7EAEFC;
-}
-footer {
-  background-color: #2a2f4a;
-  height: 12%;
-  width: 100%;
-  color: #CDE0FF;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .tag-input {
