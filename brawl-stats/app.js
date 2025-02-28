@@ -5,8 +5,9 @@ const bcrypt = require('bcrypt');
 require('dotenv').config();
 const uri = process.env.URI;
 const client = new MongoClient(uri);
-const mydb = client.db('brawl-stats').collection('users');
+const mydb = client.db(process.env.NAME_DB).collection('users');
 const usersDAO = require('./dao/usersDAO');
+const apiBrawl = require('./dao/apiBrawl');
 const path = require('path');
 
 app.set('view engine', 'ejs');
@@ -47,10 +48,10 @@ app.post('/register', async (req, res) => {
     res.send("Cadastro realizado com sucesso!");
 });
 
-app.post('/principal', (req, res) => {
+app.post('/principal', async (req, res) => {
     const { estatistica } = req.body;
-    const jogador = { estatistica };
-    //await usersDAO.insertUser(mydb, user);
+    const jogador = await apiBrawl.getPlayerStats(estatistica);
+    console.log(jogador);
     res.send(jogador);
 });
 
