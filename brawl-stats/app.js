@@ -12,9 +12,10 @@ const path = require('path');
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index', {title: "Teste"});
+    res.render('index', {texto: "Teste"});
 });
 
 app.get('/login', (req, res) => {
@@ -23,6 +24,10 @@ app.get('/login', (req, res) => {
 
 app.get('/register', (req, res) => {
     res.render('register');
+});
+
+app.get('/principal', (req, res) => {
+    res.render('principal');
 });
 
 app.post('/login', async (req, res) => {

@@ -4,9 +4,12 @@
     <div class="container-contest">
         <div class="container-box">
             <img src="/images/Logo-Brawl.png" alt="Logo" class="logo"> 
-            <div>
-                <a href="/login"><%- include('componentes/botao', { tela: 'index', text: 'Entrar' }) %></a>
-                <a href="/principal" class="d-block mt-3 custom-a">Continuar sem login</a>
+            <div class="procurar-jogador">
+                <div class="tag-input">
+                    <span class="tag-symbol">#</span>
+                    <input type="text" placeholder="Tag">
+                </div>
+                <a href="/login"><%- include('componentes/botao', { tela: 'estatisticas', text: 'Estatísticas' }) %></a>
             </div>
         </div>
     </div>

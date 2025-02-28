@@ -1,8 +1,91 @@
+header {
+  background-color: #2a2f4a;
+  height: 12%;
+  width: 100%;
+}
 body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Kanit', sans-serif;
+}
+.container-contest {
+  background-color: #5a1f1f;
+  height: 76%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-box {
+  color: white;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 16rem;
+}
+.logo {
+  width: 10rem;
+  margin-bottom: 20px;
+  padding-bottom: 1rem;
+}
+.custom-btn {
+  background-color: rgba(26, 42, 93, 0.7);
+  color: #CDE0FF;
+  height: 2.5rem;
+  font-size: 18px;
+  border-radius: 22px;
+}
+#index {
+  width: 100%;
+}
+#principal {
+  width: 12rem;
+}
+#estatisticas {
+  width: 12rem;
+}
+.custom-btn:hover {
+  background-color: rgba(26, 42, 93);
+  color: white; 
+}
+.custom-a {
+  color: #7EAEFC;
+}
+footer {
+  background-color: #2a2f4a;
+  height: 12%;
+  width: 100%;
+  color: #CDE0FF;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-a {
-  color: #00B7FF;
+.tag-input {
+  display: flex;
+  align-items: center;
+  background-color: #1A3A73;
+  border-radius: 20px;
+  padding: 5px;
+  width: 20rem;
+}
+
+.tag-symbol {
+  color: white;
+  font-size: 18px;
+  margin: 0 10px;
+}
+
+input {
+  border: none;
+  background-color: #D1D5DB; /* Cinza claro do input */
+  border-radius: 0 15px 15px 0;  
+  padding: 5px 10px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
 }
