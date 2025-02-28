@@ -51,8 +51,11 @@ app.post('/register', async (req, res) => {
 app.post('/principal', async (req, res) => {
     const { estatistica } = req.body;
     const jogador = await apiBrawl.getPlayerStats(estatistica);
-    console.log(jogador);
-    res.send(jogador);
+    if (jogador) {
+        res.send(jogador);
+    } else {
+        console.log(jogador);
+    }
 });
 
 module.exports = app;

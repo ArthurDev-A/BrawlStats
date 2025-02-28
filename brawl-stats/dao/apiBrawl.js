@@ -4,6 +4,10 @@ const urlBase = process.env.URL_BASE_BRAWL;
 
 class apiBrawl {
     static async getPlayerStats(tag) {
+        if (tag[0] !== '#') {
+            tag = '#'+tag;
+        }
+
         const url = urlBase + encodeURIComponent(tag);
 
         try {
