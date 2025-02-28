@@ -47,4 +47,11 @@ app.post('/register', async (req, res) => {
     res.send("Cadastro realizado com sucesso!");
 });
 
+app.post('/principal', (req, res) => {
+    const { estatistica } = req.body;
+    const jogador = { estatistica };
+    //await usersDAO.insertUser(mydb, user);
+    res.send(jogador);
+});
+
 module.exports = app;

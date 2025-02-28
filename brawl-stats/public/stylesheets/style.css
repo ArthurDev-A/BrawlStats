@@ -1,3 +1,4 @@
+/* todos */
 header {
   background-color: #2a2f4a;
   height: 12%;
@@ -41,18 +42,29 @@ footer {
   align-items: center;
   text-align: center;
   width: 16rem;
+  gap: 3rem;
 }
 .logo {
-  width: 10rem;
-  margin-bottom: 20px;
+  height: 12rem;
   padding-bottom: 1rem;
 }
+
+
+/* botão */
 .custom-btn {
   background-color: rgba(26, 42, 93, 0.7);
   color: #CDE0FF;
   height: 2.5rem;
   font-size: 18px;
   border-radius: 22px;
+}
+.custom-btn:hover {
+  background-color: #1A2A5D;
+  color: white; 
+}
+.custom-btn:active {
+  background-color: #1C407B !important; /* Força a aplicação */
+  color: white !important;
 }
 #index {
   width: 100%;
@@ -62,11 +74,10 @@ footer {
 }
 #estatisticas {
   width: 12rem;
+  background-color: #1C407B;
 }
-.custom-btn:hover {
-  background-color: rgba(26, 42, 93);
-  color: white; 
-}
+
+/* index */
 .custom-a {
   color: #7EAEFC;
 }
@@ -74,7 +85,7 @@ footer {
 .tag-input {
   display: flex;
   align-items: center;
-  background-color: #1A3A73;
+  background-color: #1C407B;
   border-radius: 20px;
   padding: 5px;
   width: 20rem;

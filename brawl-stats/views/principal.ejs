@@ -4,13 +4,10 @@
     <div class="container-contest">
         <div class="container-box">
             <img src="/images/Logo-Brawl.png" alt="Logo" class="logo"> 
-            <div class="procurar-jogador">
-                <div class="tag-input">
-                    <span class="tag-symbol">#</span>
-                    <input type="text" placeholder="Tag">
-                </div>
-                <a href="/login"><%- include('componentes/botao', { tela: 'estatisticas', text: 'Estatísticas' }) %></a>
-            </div>
+            <form action="/principal" method="post" class="procurar-jogador">
+                <%- include('componentes/input') %>
+                <%- include('componentes/botao-forms', { tela: 'estatisticas', text: 'Estatísticas' }) %>
+            </form>
         </div>
     </div>
     <%- include('componentes/footer') %>
