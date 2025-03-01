@@ -1,6 +1,6 @@
 header {
   background-color: #2a2f4a;
-  height: 12%;
+  min-height: 5rem;
   width: 100%;
 }
 body {
@@ -11,14 +11,13 @@ body {
 }
 footer {
   background-color: #2a2f4a;
-  height: 12%;
+  min-height: 5rem;
   width: 100%;
   color: #CDE0FF;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 }
 .container-contest {
   background-color: #5a1f1f;
@@ -27,7 +26,8 @@ footer {
   display: flex;
   align-items: start;
   justify-content: center;
-  padding: 5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 .container-box {
   color: white;
