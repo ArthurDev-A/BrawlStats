@@ -29,6 +29,9 @@ input {
     gap: 16px;
 }
 .erro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 48px;
     font-size: large;
 }

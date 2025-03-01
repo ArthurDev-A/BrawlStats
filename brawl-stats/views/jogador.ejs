@@ -6,12 +6,12 @@
             <div class="cartao">
                 <img src="https://cdn.brawlify.com/profile-icons/regular/<%= jogador.icon.id %>.png" alt="Ícone de jogador" class="icon">
                 <div class="identificacao">
-                    <p class="nome" style="color: #<%= jogador.nameColor.substr(4, 8) %>;"><%= jogador.name %></p>
+                    <p class="nome" style="color: <%= jogador.nameColor ? '#'+jogador.nameColor.substr(4, 6) : 'white' %>;"><%= jogador.name %></p>
                     <p class="tag"><%= jogador.tag.toUpperCase() %></p>
                 </div>
             </div>
             <div class="informacoes">
-                
+                <p><%= jogador.name %></p>
             </div>
         </div>
     </div>

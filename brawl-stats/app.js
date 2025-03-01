@@ -1,19 +1,22 @@
 const express = require('express');
-const app = express();
 const { MongoClient } = require('mongodb');
 const bcrypt = require('bcrypt');
-require('dotenv').config();
-const uri = process.env.URI;
-const client = new MongoClient(uri);
-const mydb = client.db(process.env.NAME_DB).collection('users');
 const usersDAO = require('./dao/usersDAO');
 const apiBrawl = require('./dao/apiBrawl');
 const path = require('path');
+const cookieParser = require('cookie-parser');
+require('dotenv').config();
+
+const app = express();
+const uri = process.env.URI;
+const client = new MongoClient(uri);
+const mydb = client.db(process.env.NAME_DB).collection('users');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(cookieParser());
 
 app.get('/', (req, res) => {
     res.render('index');
@@ -28,7 +31,9 @@ app.get('/register', (req, res) => {
 });
 
 app.get('/principal', (req, res) => {
-    res.render('principal', {erro: ""});
+    const erro = req.cookies.erro || "";
+    res.cookie('erro', '');
+    res.render('principal', { erro });
 });
 
 app.post('/login', async (req, res) => {
@@ -48,14 +53,14 @@ app.post('/register', async (req, res) => {
     res.send("Cadastro realizado com sucesso!");
 });
 
-app.post('/principal', async (req, res) => {
+app.post('/jogador', async (req, res) => {
     const { estatistica } = req.body;
     const jogador = await apiBrawl.getPlayerStats(estatistica);
     if (jogador) {
         res.render('jogador', { jogador: jogador });
     } else {
-        console.log(jogador);
-        res.render('principal', { erro: "O jogador não foi encontrado" });
+        res.cookie('erro', "O jogador não foi encontrado");
+        res.redirect('/principal');
     }
 });
 

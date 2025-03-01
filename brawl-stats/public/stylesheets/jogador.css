@@ -23,3 +23,9 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.5);
 }
+.informacoes {
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    border-radius: 2rem;
+}
