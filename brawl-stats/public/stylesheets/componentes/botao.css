@@ -1,0 +1,25 @@
+.custom-btn {
+    background-color: rgba(26, 42, 93, 0.7);
+    color: #CDE0FF;
+    height: 2.5rem;
+    font-size: 18px;
+    border-radius: 22px;
+}
+.custom-btn:hover {
+    background-color: #1A2A5D;
+    color: white; 
+}
+.custom-btn:active {
+    background-color: #1C407B !important;
+    color: white !important;
+}
+#index {
+    width: 100%;
+}
+#principal {
+    width: 12rem;
+}
+#estatisticas {
+    width: 12rem;
+    background-color: #1C407B;
+}

@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.render('index', {texto: "Teste"});
+    res.render('index');
 });
 
 app.get('/login', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/register', (req, res) => {
 });
 
 app.get('/principal', (req, res) => {
-    res.render('principal');
+    res.render('principal', {erro: ""});
 });
 
 app.post('/login', async (req, res) => {
@@ -55,6 +55,7 @@ app.post('/principal', async (req, res) => {
         res.send(jogador);
     } else {
         console.log(jogador);
+        res.render('principal', {erro: "O jogador não foi encontrado"});
     }
 });
 

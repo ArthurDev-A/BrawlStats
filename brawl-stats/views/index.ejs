@@ -1,9 +1,10 @@
-<%- include('componentes/head', { titulo: 'Brawl Stats' }) %>
+<%- include('componentes/head', { titulo: 'Brawl Stats', estilos: ['index', 'componentes/botao'] }) %>
 <body class="d-flex justify-content-center align-items-center vh-100">
     <header></header>
     <div class="container-contest">
         <div class="container-box">
-            <img src="/images/Logo-Brawl.png" alt="Logo" class="logo"> 
+            <img src="/images/Logo-Brawl.png" alt="Logo" class="logo">
+            <div class="erro"></div>
             <div>
                 <a href="/login"><%- include('componentes/botao', { tela: 'index', text: 'Entrar' }) %></a>
                 <a href="/principal" class="d-block mt-3 custom-a">Continuar sem login</a>

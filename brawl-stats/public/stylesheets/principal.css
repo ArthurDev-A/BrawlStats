@@ -1,0 +1,34 @@
+.tag-input {
+    display: flex;
+    align-items: center;
+    background-color: #1C407B;
+    border-radius: 20px;
+    padding: 5px;
+    width: 20rem;
+}
+.tag-symbol {
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+}
+input {
+    border: none;
+    background-color: #D1D5DB;
+    border-radius: 0 15px 15px 0;  
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+}
+.procurar-jogador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.erro {
+    height: 3rem;
+    font-size: large;
+}
