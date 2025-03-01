@@ -1,17 +1,16 @@
 header {
   background-color: #2a2f4a;
-  min-height: 5rem;
+  min-height: 80px;
   width: 100%;
 }
 body {
   background-color: #2a2f4a;
-  display: flex;
   flex-direction: column;
   font-family: 'Lilita One', sans-serif;
 }
 footer {
   background-color: #2a2f4a;
-  min-height: 5rem;
+  min-height: 80px;
   width: 100%;
   color: #CDE0FF;
   text-align: center;
@@ -23,11 +22,8 @@ footer {
   background-color: #5a1f1f;
   flex-grow: 1;
   width: 100%;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .container-box {
   color: white;
@@ -37,6 +33,27 @@ footer {
   text-align: center;
 }
 .logo {
-  height: 12rem;
-  padding-bottom: 1rem;
+  height: 180px;
+}
+
+.custom-btn {
+  background-color: rgba(26, 42, 93, 0.7);
+  color: #CDE0FF;
+  height: 2.5rem;
+  font-size: 18px;
+  border-radius: 22px;
+}
+.custom-btn:hover {
+  background-color: #1A2A5D;
+  color: white; 
+}
+.custom-btn:active {
+  background-color: #1C407B !important;
+  color: white !important;
+}
+.tipo1 {
+  width: 100%;
+}
+.tipo2 {
+  width: 12rem;
 }

@@ -1,4 +1,4 @@
-<%- include('componentes/head', { titulo: 'Brawl Stats', estilos: ['principal', 'componentes/botao'] }) %>
+<%- include('componentes/head', { titulo: 'Brawl Stats', estilos: ['principal'] }) %>
 <body class="d-flex justify-content-center align-items-center min-vh-100">
     <header></header>
     <div class="container-contest">
@@ -7,7 +7,7 @@
             <div class="erro"><%= erro %></div>
             <form action="/principal" method="post" class="procurar-jogador">
                 <%- include('componentes/input') %>
-                <%- include('componentes/botao-forms', { tela: 'estatisticas', text: 'Estatísticas' }) %>
+                <%- include('componentes/botao-forms', { tipo: 'tipo2', text: 'Estatísticas' }) %>
             </form>
         </div>
     </div>

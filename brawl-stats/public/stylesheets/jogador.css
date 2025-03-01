@@ -1,0 +1,25 @@
+.container-contest {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+.cartao {
+    display: flex;
+}
+.icon {
+    width: 10rem;
+    object-fit: contain;
+}
+.identificacao {
+    margin-left: 1rem;
+}
+.nome {
+    font-size: 4rem;
+    -webkit-text-stroke: 0.12rem black;
+    text-shadow: 0 0.5rem 0 black;
+    margin: 0;
+}
+.tag {
+    text-align: left;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+}

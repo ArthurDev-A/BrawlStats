@@ -52,10 +52,10 @@ app.post('/principal', async (req, res) => {
     const { estatistica } = req.body;
     const jogador = await apiBrawl.getPlayerStats(estatistica);
     if (jogador) {
-        res.send(jogador);
+        res.render('jogador', { jogador: jogador });
     } else {
         console.log(jogador);
-        res.render('principal', {erro: "O jogador não foi encontrado"});
+        res.render('principal', { erro: "O jogador não foi encontrado" });
     }
 });
 
