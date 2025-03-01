@@ -1,12 +1,12 @@
-header {
-  background-color: #2a2f4a;
-  min-height: 80px;
-  width: 100%;
-}
 body {
   background-color: #2a2f4a;
   flex-direction: column;
   font-family: 'Lilita One', sans-serif;
+}
+header {
+  background-color: #2a2f4a;
+  min-height: 80px;
+  width: 100%;
 }
 footer {
   background-color: #2a2f4a;

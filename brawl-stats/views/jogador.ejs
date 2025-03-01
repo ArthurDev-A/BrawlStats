@@ -1,4 +1,4 @@
-<%- include('componentes/head', { titulo: 'Brawl Stats', estilos: ['jogador'] }) %>
+<%- include('componentes/head', { titulo: jogador.name, estilos: ['jogador'], icon: jogador.icon.id }) %>
 <body class="d-flex align-items-center min-vh-100">
     <header></header>
     <div class="container-contest">
@@ -9,6 +9,9 @@
                     <p class="nome" style="color: #<%= jogador.nameColor.substr(4, 8) %>;"><%= jogador.name %></p>
                     <p class="tag"><%= jogador.tag.toUpperCase() %></p>
                 </div>
+            </div>
+            <div class="informacoes">
+                
             </div>
         </div>
     </div>
