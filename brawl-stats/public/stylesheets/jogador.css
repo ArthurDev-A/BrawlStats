@@ -1,16 +1,19 @@
+p {
+    margin: 0;
+}
 .container-contest {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 .cartao {
     display: flex;
+    width: 100%;
 }
 .icon {
     width: 10rem;
+    height: 10rem;
     object-fit: contain;
-}
-.identificacao {
-    margin-left: 1rem;
+    margin: 0 1rem 1rem 0;
 }
 .nome {
     font-size: 4rem;
@@ -23,9 +26,23 @@
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.5);
 }
-.informacoes {
-    margin-top: 1rem;
+.cartao-informacoes {
+    padding: 16px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     border-radius: 2rem;
+}
+.linha {
+    display: flex;
+    justify-content: space-between;
+}
+.informacoes {
+    font-size: 2rem;
+}
+.nome-informacoes {
+    color: #CCCCCC;
+}
+.conteudo-informacoes {
+    margin-left: 2rem;
+    color: #FFFFFF;
 }
