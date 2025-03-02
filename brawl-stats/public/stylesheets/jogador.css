@@ -2,8 +2,8 @@ p {
     margin: 0;
 }
 .container-contest {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 .cartao {
     display: flex;
@@ -28,6 +28,7 @@ p {
 }
 .cartao-informacoes {
     padding: 16px;
+    margin-bottom: 32px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     border-radius: 2rem;
@@ -45,4 +46,7 @@ p {
 .conteudo-informacoes {
     margin-left: 2rem;
     color: white;
+}
+.custom-btn {
+    width: 8rem;
 }
