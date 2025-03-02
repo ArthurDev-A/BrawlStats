@@ -56,8 +56,9 @@ app.post('/register', async (req, res) => {
 app.post('/jogador', async (req, res) => {
     const { estatistica } = req.body;
     const jogador = await apiBrawl.getPlayerStats(estatistica);
+    const brawlers = await apiBrawl.getBrawlers();
     if (jogador) {
-        res.render('jogador', { jogador: jogador });
+        res.render('jogador', { jogador: jogador, brawlers: brawlers });
     } else {
         res.cookie('erro', "O jogador não foi encontrado");
         res.redirect('/principal');

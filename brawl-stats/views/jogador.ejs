@@ -25,15 +25,15 @@
                 </div>
                 <div class="linha">
                     <p class="nome-informacoes informacoes">Vitórias duo:</p>
-                    <p class="conteudo-informacoes informacoes"><%= jogador.soloVictories %></p>
-                </div>
-                <div class="linha">
-                    <p class="nome-informacoes informacoes">Vitórias solo:</p>
                     <p class="conteudo-informacoes informacoes"><%= jogador.duoVictories %></p>
                 </div>
                 <div class="linha">
+                    <p class="nome-informacoes informacoes">Vitórias solo:</p>
+                    <p class="conteudo-informacoes informacoes"><%= jogador.soloVictories %></p>
+                </div>
+                <div class="linha">
                     <p class="nome-informacoes informacoes">Quantidade de brawlers:</p>
-                    <p class="conteudo-informacoes informacoes"><%= jogador.brawlers.length %>/89</p>
+                    <p class="conteudo-informacoes informacoes"><%= jogador.brawlers.length %>/<%= brawlers.items.length %></p>
                 </div>
             </div>
         </div>
