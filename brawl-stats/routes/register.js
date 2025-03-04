@@ -1,12 +1,7 @@
 const express = require('express');
-const { MongoClient } = require('mongodb');
 const usersController = require('../controllers/usersController');
-require('dotenv').config();
 
 const router = express.Router();
-const uri = process.env.URI;
-const client = new MongoClient(uri);
-const mydb = client.db(process.env.NAME_DB).collection('users');
 
 router.get('/', function(req, res) {
     res.render('register');
@@ -15,8 +10,8 @@ router.get('/', function(req, res) {
 router.post('/', async (req, res) => {
     const { email, senha } = req.body;
     const user = { email, senha };
-    await usersController.insertUser(mydb, user);
-    res.send("Cadastro realizado com sucesso!");
+    const result = await usersController.insertUser(user);
+    res.send(result.acknowledged ? "Cadastro realizado com sucesso!" : "Cadastro não foi realizado! Email já exisente.");
 });
 
 module.exports = router;

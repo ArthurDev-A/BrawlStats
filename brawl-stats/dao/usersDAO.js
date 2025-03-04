@@ -1,26 +1,32 @@
 const bcrypt = require('bcrypt');
+const userDB = require('./userDb');
+require('dotenv').config();
+
+const dbName = process.env.NAME_DB;
 
 class usersDAO {
-    static async getUserByEmail(client, email) {
+    static async getUserByEmail(email) {
         try {
-            const user = await client.findOne({ email: email }, { projection: { _id: 0 } });
+            const db = await userDB.connectDB(dbName);
+            const user = await db.collection('users').findOne({ email: email }, { projection: { _id: 0 } });
             return user;
         } catch (err) {
             console.log(err);
         }
     }
 
-    static async insertUser(client, doc) {
+    static async insertUser(doc) {
         try {
-            // Verifica se o usuário já existe
-            const existingUser = await client.findOne({ email: doc.email });
-            if (existingUser) {
-                throw new Error('Usuário já existe');
-            }
+            const db = await userDB.connectDB(dbName);
 
+            const existingUser = await db.collection('users').findOne({ email: doc.email });
+            if (existingUser) {
+                return { acknowledged: false };
+            }
+            
             const salt = await bcrypt.genSalt(10);
             doc.senha = await bcrypt.hash(doc.senha, salt);
-            const result = await client.insertOne(doc);
+            const result = await db.collection('users').insertOne(doc);
             return result;
         } catch (err) {
             console.log(err);
