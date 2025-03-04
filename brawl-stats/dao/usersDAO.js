@@ -12,12 +12,19 @@ class usersDAO {
 
     static async insertUser(client, doc) {
         try {
+            // Verifica se o usuário já existe
+            const existingUser = await client.findOne({ email: doc.email });
+            if (existingUser) {
+                throw new Error('Usuário já existe');
+            }
+
             const salt = await bcrypt.genSalt(10);
-            doc.password = await bcrypt.hash(doc.password, salt);
+            doc.senha = await bcrypt.hash(doc.senha, salt);
             const result = await client.insertOne(doc);
             return result;
         } catch (err) {
             console.log(err);
+            throw new Error('Erro ao inserir usuário');
         }
     }
 }

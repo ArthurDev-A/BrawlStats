@@ -4,11 +4,7 @@ const urlBase = process.env.URL_BASE_BRAWL;
 
 class apiBrawl {
     static async getPlayerStats(tag) {
-        if (tag[0] !== '#') {
-            tag = '#'+tag;
-        }
-
-        const url = urlBase + 'players/' + encodeURIComponent(tag);
+        const url = urlBase + 'players/%23' + encodeURIComponent(tag);
 
         try {
             const response = await fetch(url, {
@@ -27,7 +23,7 @@ class apiBrawl {
             return data
         } catch (error) {
             console.error("🚨 Erro ao buscar os dados:", error);
-            return
+            return;
         }
     }
     static async getBrawlers() {
